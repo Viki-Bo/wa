@@ -66,6 +66,10 @@ a:visited {
           animation: bg-animation 3s infinite alternate;
 }
 
+#carouselHeroFade {
+  overflow-x: hidden;
+}
+
 @-webkit-keyframes bg-animation {
   0% {
     background-position: left;
@@ -156,7 +160,7 @@ nav ul {
   transition: ease-in 900ms;
 }
 
-#quote {
+#quote a {
   background-color: var(--pink);
   padding: 0.8rem 2rem;
   font-size: 1.75rem;
@@ -200,9 +204,6 @@ nav ul {
   line-height: 5rem;
   margin-bottom: 3rem;
   letter-spacing: -3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-right: -200px;
 }
 
@@ -236,6 +237,7 @@ nav ul {
 .carousel-control-prev,
 .carousel-control-next {
   margin: 0 -60px;
+  z-index: 10;
 }
 
 .contact {
@@ -631,11 +633,6 @@ nav .fa-phone {
   display: block;
 }
 
-.top-rated img {
-  position: relative;
-  padding-right: 20%;
-}
-
 .top-rated h2,
 .top-rated h3 {
   font-family: 'MotivaSans';
@@ -683,7 +680,12 @@ nav .fa-phone {
   gap: 1rem;
 }
 
+.m-card h4 {
+  font-weight: bold;
+}
+
 .m-card i {
+  display: block;
   font-size: 2.5rem;
   padding: 1rem 0rem;
 }
@@ -858,6 +860,17 @@ nav .fa-phone {
 .mobile-phone {
   padding-right: 1rem;
   text-align: justify;
+  position: relative;
+}
+
+.mobile-background {
+  position: absolute;
+  top: -15%;
+}
+
+.mobile-background img {
+  max-width: 100%;
+  z-index: -10;
 }
 
 .mobile-cards .mob-card {
@@ -866,36 +879,29 @@ nav .fa-phone {
   position: relative;
 }
 
-.mobile-cards .mob-card img {
-  max-width: 550px;
-  position: relative;
-  top: -10%;
-  z-index: -10;
-}
-
 .mobile-cards a {
   display: block;
   padding: 1.5rem;
   margin-top: 1rem;
   text-align: center;
-  border: solid 2px lightgray;
+  border: solid 2px #b8b7b7;
   border-radius: 30px;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
-}
-
-.mobile-cards i {
-  padding: 1rem;
-  font-size: 4rem;
 }
 
 .mob-cards {
   margin: 3rem 0rem;
 }
 
+.mob-cards i {
+  padding: 1rem;
+  font-size: 4rem;
+}
+
 .mob-content {
   z-index: 20;
-  padding: 0 3rem 0 0;
+  padding: 0 4rem;
   position: relative;
   margin-top: -1rem;
 }
@@ -907,6 +913,16 @@ nav .fa-phone {
   text-align: center;
 }
 
+.mob-content h5 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.mob-content i {
+  color: blue;
+  margin: 0 1rem;
+}
+
 .mob-content h4 {
   color: var(--blue);
 }
@@ -914,7 +930,19 @@ nav .fa-phone {
 .mob-content p {
   margin: 2rem 0rem;
   margin-right: -1rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+}
+
+.mob-content div {
+  padding: 0.25rem 0rem;
+  font-size: 1.5rem;
+}
+
+.mob-content div a {
+  margin-top: 2rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
 }
 
 .mobile-content div a {
@@ -932,12 +960,102 @@ nav .fa-phone {
 
 .guy img {
   position: relative;
-  left: 6.5rem;
+}
+
+.construction {
+  background-color: #f2f2f2;
+  padding: 1rem 1rem 3rem 1rem;
+}
+
+.construction .accordion-item {
+  margin: 1rem 0;
+}
+
+.construction .accordion-button {
+  color: black;
+  background-color: white;
+}
+
+.construction .accordion-button i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.construction .accordion-header button {
+  font-size: 1.5rem;
+}
+
+.construction .accordion-body {
+  font-size: 1.25rem;
+}
+
+.construction .accordion-body i {
+  margin: 0 0.5rem;
+  color: var(--blue);
+}
+
+.construction .accordion-body h5 {
+  font-weight: bold;
+}
+
+.construction .learn-more {
+  text-align: right;
+}
+
+.construction .learn-more a {
+  color: var(--blue);
+}
+
+@media (max-width: 1199px) {
+  #woman {
+    display: none;
+  }
+  #logo {
+    margin-left: -5%;
+    width: 15rem;
+  }
+  .nav-links {
+    font-size: 1.25rem;
+  }
+  .nav-links li {
+    padding-top: 0.3rem;
+  }
+  .nav-links #quote {
+    padding-top: 0;
+  }
+  .hero {
+    padding: 3rem 2rem;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    margin: 1rem;
+  }
+  .slider-content a {
+    margin: 1rem 15%;
+  }
+  .slider-content h1 {
+    font-size: 3.5rem;
+    margin: 1rem 15%;
+  }
+  .globe {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .top-rated img {
+    max-width: 90%;
+    margin-top: 2rem;
+  }
+  .globus img {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 840px) {
   h1 {
     font-size: 2.5rem;
+  }
+  .m-card i {
+    display: inline;
   }
   h3 {
     font-size: 1.75rem;
@@ -949,14 +1067,24 @@ nav .fa-phone {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: auto;
     position: relative;
+    margin: 0 auto;
+    padding: 0;
   }
   nav .fa-phone {
     color: var(--white);
     display: inline-block;
     position: absolute;
     height: 2rem;
+  }
+  .back2 {
+    background-color: #f2f2f2;
+    -webkit-transform: skewY(2deg);
+            transform: skewY(2deg);
+    position: relative;
+    top: -2rem;
+    height: 5rem;
+    z-index: -3;
   }
   .burger {
     position: absolute;
@@ -1056,6 +1184,15 @@ nav .fa-phone {
             justify-content: center;
     text-align: center;
   }
+  .small-bold {
+    font-weight: 800;
+  }
+  .cards-calls {
+    padding: 1rem 3rem;
+  }
+  .cards-calls .m-card {
+    padding: 0.5rem 0rem;
+  }
   .slider-content h1 {
     display: block;
     font-size: 2.5rem;
@@ -1069,6 +1206,7 @@ nav .fa-phone {
     text-align: center;
     font-weight: 400;
     letter-spacing: -1px;
+    line-height: 2.5rem;
   }
   .slider-content a {
     display: -webkit-box;
@@ -1083,6 +1221,60 @@ nav .fa-phone {
   }
   .slider-content img {
     display: none;
+  }
+  .top-rated {
+    text-align: center;
+    margin: 2rem 0rem;
+  }
+  .top-rated h2,
+  .top-rated h3 {
+    font-size: 2rem;
+  }
+  .top-rated p {
+    font-size: 1.25rem;
+    margin: -1rem 0rem;
+  }
+  .top-rated .button-pink {
+    margin-top: 3rem;
+  }
+  .top-rated .button-pink a {
+    padding: 0.9rem 5rem;
+  }
+  .old-phone h2,
+  .old-phone h3 {
+    font-size: 2rem;
+  }
+  .globus {
+    text-align: center;
+    background-color: #f2f2f2;
+  }
+  .globus .content {
+    text-align: center;
+    margin: 1rem 0rem;
+  }
+  .globus .content h2,
+  .globus .content h3 {
+    font-size: 2rem;
+  }
+  .globus .content p {
+    margin: 1rem 2rem;
+  }
+  .industry {
+    background-color: #f2f2f2;
+    padding: 2rem 1rem;
+  }
+  .industry h2 {
+    font-size: 2rem;
+    text-align: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .industry-lorem {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 1rem 2rem;
   }
   .cards {
     display: -webkit-box;
@@ -1181,37 +1373,6 @@ nav .fa-phone {
   }
   .globe {
     display: none;
-  }
-}
-
-@media (max-width: 1199px) {
-  #woman {
-    display: none;
-  }
-  #logo {
-    margin-left: -5%;
-    width: 15rem;
-  }
-  .nav-links {
-    font-size: 1.25rem;
-  }
-  .hero {
-    padding: 3rem 2rem;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-    margin: 1rem;
-  }
-  .slider-content a {
-    margin: 1rem 15%;
-  }
-  .slider-content h1 {
-    font-size: 3.5rem;
-    margin: 1rem 15%;
-  }
-  .globe {
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

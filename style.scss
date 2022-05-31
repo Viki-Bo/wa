@@ -69,6 +69,10 @@ a:visited {
   animation: bg-animation 3s infinite alternate;
 }
 
+#carouselHeroFade {
+  overflow-x: hidden;
+}
+
 @keyframes bg-animation {
   0% {
     background-position: left;
@@ -125,7 +129,7 @@ nav {
   }
 }
 
-#quote {
+#quote a {
   background-color: var(--pink);
   padding: 0.8rem 2rem;
   font-size: 1.75rem;
@@ -156,7 +160,6 @@ nav {
     line-height: 5rem;
     margin-bottom: 3rem;
     letter-spacing: -3px;
-    display: flex;
     margin-right: -200px;
   }
 
@@ -188,6 +191,7 @@ nav {
 .carousel-control-prev,
 .carousel-control-next {
   margin: 0 -60px;
+  z-index: 10;
 }
 
 .contact {
@@ -482,11 +486,6 @@ nav .fa-phone {
 .top-rated {
   display: block;
 
-  img {
-    position: relative;
-    padding-right: 20%;
-  }
-
   h2,
   h3 {
     font-family: 'MotivaSans';
@@ -529,7 +528,12 @@ nav .fa-phone {
 .m-card {
   gap: 1rem;
 
+  h4 {
+    font-weight: bold;
+  }
+
   i {
+    display: block;
     font-size: 2.5rem;
     padding: 1rem 0rem;
   }
@@ -690,19 +694,23 @@ nav .fa-phone {
 .mobile-phone {
   padding-right: 1rem;
   text-align: justify;
+  position: relative;
 }
+.mobile-background {
+  position: absolute;
+  top: -15%;
+
+  img {
+    max-width: 100%;
+    z-index: -10;
+  }
+}
+
 .mobile-cards {
   .mob-card {
     z-index: -2;
     margin-bottom: -30%;
     position: relative;
-
-    img {
-      max-width: 550px;
-      position: relative;
-      top: -10%;
-      z-index: -10;
-    }
   }
 
   a {
@@ -710,10 +718,14 @@ nav .fa-phone {
     padding: 1.5rem;
     margin-top: 1rem;
     text-align: center;
-    border: solid 2px lightgray;
+    border: solid 2px rgb(184, 183, 183);
     border-radius: 30px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
   }
+}
+
+.mob-cards {
+  margin: 3rem 0rem;
 
   i {
     padding: 1rem;
@@ -721,13 +733,9 @@ nav .fa-phone {
   }
 }
 
-.mob-cards {
-  margin: 3rem 0rem;
-}
-
 .mob-content {
   z-index: 20;
-  padding: 0 3rem 0 0;
+  padding: 0 4rem;
   position: relative;
   margin-top: -1rem;
   h3,
@@ -736,6 +744,15 @@ nav .fa-phone {
     font-weight: bold;
     text-align: center;
   }
+  h5 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  i {
+    color: blue;
+    margin: 0 1rem;
+  }
 
   h4 {
     color: var(--blue);
@@ -743,9 +760,22 @@ nav .fa-phone {
   p {
     margin: 2rem 0rem;
     margin-right: -1rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+  }
+
+  div {
+    padding: 0.25rem 0rem;
+    font-size: 1.5rem;
+  }
+
+  div a {
+    margin-top: 2rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
   }
 }
+
 .mobile-content {
   div a {
     font-size: 1.75rem;
@@ -761,13 +791,118 @@ nav .fa-phone {
   text-align: right;
   img {
     position: relative;
-    left: 6.5rem;
+  }
+}
+
+.construction {
+  background-color: #f2f2f2;
+  padding: 1rem 1rem 3rem 1rem;
+
+  .accordion-item {
+    margin: 1rem 0;
+  }
+  .accordion-button {
+    color: black;
+    background-color: white;
+    i {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .accordion-header button {
+    font-size: 1.5rem;
+  }
+
+  .accordion-body {
+    font-size: 1.25rem;
+    i {
+      margin: 0 0.5rem;
+      color: var(--blue);
+    }
+    h5 {
+      font-weight: bold;
+    }
+  }
+
+  .learn-more {
+    text-align: right;
+    a {
+      color: var(--blue);
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  #woman {
+    display: none;
+  }
+
+  #logo {
+    margin-left: -5%;
+    width: 15rem;
+  }
+
+  .nav-links {
+    font-size: 1.25rem;
+
+    li {
+      padding-top: 0.3rem;
+    }
+
+    #quote {
+      padding-top: 0;
+    }
+  }
+
+  .hero {
+    padding: 3rem 2rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    margin: 1rem;
+  }
+
+  .slider-content {
+    a {
+      margin: 1rem 15%;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin: 1rem 15%;
+    }
+  }
+
+  .globe {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .top-rated {
+    img {
+      max-width: 90%;
+      margin-top: 2rem;
+    }
+  }
+
+  .globus {
+    img {
+      max-width: 100%;
+    }
   }
 }
 
 @media (max-width: 840px) {
   h1 {
     font-size: 2.5rem;
+  }
+
+  .m-card {
+    i {
+      display: inline;
+    }
   }
 
   h3 {
@@ -777,8 +912,9 @@ nav .fa-phone {
   #logo {
     display: flex;
     justify-content: center;
-    padding: auto;
     position: relative;
+    margin: 0 auto;
+    padding: 0;
   }
 
   nav .fa-phone {
@@ -786,6 +922,15 @@ nav .fa-phone {
     display: inline-block;
     position: absolute;
     height: 2rem;
+  }
+
+  .back2 {
+    background-color: #f2f2f2;
+    transform: skewY(2deg);
+    position: relative;
+    top: -2rem;
+    height: 5rem;
+    z-index: -3;
   }
 
   .burger {
@@ -877,6 +1022,17 @@ nav .fa-phone {
     justify-content: center;
     text-align: center;
   }
+  .small-bold {
+    font-weight: 800;
+  }
+
+  .cards-calls {
+    padding: 1rem 3rem;
+
+    .m-card {
+      padding: 0.5rem 0rem;
+    }
+  }
 
   .slider-content {
     h1 {
@@ -888,6 +1044,7 @@ nav .fa-phone {
       text-align: center;
       font-weight: 400;
       letter-spacing: -1px;
+      line-height: 2.5rem;
     }
 
     a {
@@ -903,6 +1060,63 @@ nav .fa-phone {
     }
   }
 
+  .top-rated {
+    text-align: center;
+    margin: 2rem 0rem;
+    h2,
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin: -1rem 0rem;
+    }
+
+    .button-pink {
+      margin-top: 3rem;
+      a {
+        padding: 0.9rem 5rem;
+      }
+    }
+  }
+  .old-phone {
+    h2,
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  .globus {
+    text-align: center;
+    background-color: #f2f2f2;
+
+    .content {
+      h2,
+      h3 {
+        font-size: 2rem;
+      }
+      text-align: center;
+      margin: 1rem 0rem;
+      p {
+        margin: 1rem 2rem;
+      }
+    }
+  }
+
+  .industry {
+    background-color: #f2f2f2;
+    padding: 2rem 1rem;
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      flex-direction: row;
+    }
+  }
+  .industry-lorem {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -997,45 +1211,5 @@ nav .fa-phone {
 
   .globe {
     display: none;
-  }
-}
-
-@media (max-width: 1199px) {
-  #woman {
-    display: none;
-  }
-
-  #logo {
-    margin-left: -5%;
-    width: 15rem;
-  }
-
-  .nav-links {
-    font-size: 1.25rem;
-  }
-
-  .hero {
-    padding: 3rem 2rem;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    margin: 1rem;
-  }
-
-  .slider-content {
-    a {
-      margin: 1rem 15%;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      margin: 1rem 15%;
-    }
-  }
-
-  .globe {
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
   }
 }
