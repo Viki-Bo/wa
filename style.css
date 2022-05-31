@@ -855,6 +855,11 @@ nav .fa-phone {
   color: var(--black);
 }
 
+.mobile-phone {
+  padding-right: 1rem;
+  text-align: justify;
+}
+
 .mobile-cards .mob-card {
   z-index: -2;
   margin-bottom: -30%;
@@ -862,17 +867,16 @@ nav .fa-phone {
 }
 
 .mobile-cards .mob-card img {
-  min-width: 630px;
+  max-width: 550px;
   position: relative;
-  top: -20%;
-  width: 100%;
+  top: -10%;
   z-index: -10;
 }
 
 .mobile-cards a {
-  margin-bottom: 1rem;
   display: block;
-  padding: 1rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
   text-align: center;
   border: solid 2px lightgray;
   border-radius: 30px;
@@ -881,18 +885,44 @@ nav .fa-phone {
 }
 
 .mobile-cards i {
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 4rem;
 }
 
 .mob-cards {
-  margin: 3rem 0rem 0;
+  margin: 3rem 0rem;
 }
 
 .mob-content {
   z-index: 20;
   padding: 0 3rem 0 0;
   position: relative;
+  margin-top: -1rem;
+}
+
+.mob-content h3,
+.mob-content h4 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mob-content h4 {
+  color: var(--blue);
+}
+
+.mob-content p {
+  margin: 2rem 0rem;
+  margin-right: -1rem;
+  font-size: 1.25rem;
+}
+
+.mobile-content div a {
+  font-size: 1.75rem;
+  border-radius: 4px;
+  padding: 0.5rem 2rem;
+  background-color: var(--blue);
+  color: white;
 }
 
 .guy {
