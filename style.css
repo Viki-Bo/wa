@@ -680,6 +680,11 @@ nav .fa-phone {
   gap: 1rem;
 }
 
+.m-card p {
+  font-size: 1.125rem;
+  padding-right: 0.5rem;
+}
+
 .m-card h4 {
   font-weight: bold;
 }
@@ -817,12 +822,15 @@ nav .fa-phone {
 
 .globus {
   width: 100%;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .globus .content {
-  padding: 2.5rem 0rem;
+  padding: 2.5rem;
   text-align: right;
   margin-top: 2rem;
+  margin-bottom: -5rem;
 }
 
 .globus h2 {
@@ -838,12 +846,7 @@ nav .fa-phone {
 }
 
 .globus p {
-  margin-left: 15%;
   font-size: 1.125rem;
-}
-
-.industry {
-  margin-top: -2rem;
 }
 
 .industry h2 {
@@ -851,6 +854,7 @@ nav .fa-phone {
   font-weight: bold;
   font-size: 4rem;
   word-wrap: wrap;
+  padding-left: 4rem;
 }
 
 .industry h2 span {
@@ -1045,8 +1049,17 @@ nav .fa-phone {
     max-width: 90%;
     margin-top: 2rem;
   }
+  .globus {
+    padding: 4rem 4rem;
+  }
   .globus img {
-    max-width: 100%;
+    min-width: 100%;
+  }
+  .industry h2 {
+    padding-left: 4rem;
+  }
+  .mobile-cards {
+    padding: 2rem 2rem;
   }
 }
 

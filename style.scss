@@ -527,6 +527,10 @@ nav .fa-phone {
 
 .m-card {
   gap: 1rem;
+  p {
+    font-size: 1.125rem;
+    padding-right: 0.5rem;
+  }
 
   h4 {
     font-weight: bold;
@@ -654,10 +658,13 @@ nav .fa-phone {
 
 .globus {
   width: 100%;
+  padding-left: 4rem;
+  padding-right: 4rem;
   .content {
-    padding: 2.5rem 0rem;
+    padding: 2.5rem;
     text-align: right;
     margin-top: 2rem;
+    margin-bottom: -5rem;
   }
 
   h2 {
@@ -673,18 +680,17 @@ nav .fa-phone {
   }
 
   p {
-    margin-left: 15%;
     font-size: 1.125rem;
   }
 }
 
 .industry {
-  margin-top: -2rem;
   h2 {
     color: var(--blue);
     font-weight: bold;
     font-size: 4rem;
     word-wrap: wrap;
+    padding-left: 4rem;
     span {
       color: var(--black);
     }
@@ -888,9 +894,21 @@ nav .fa-phone {
   }
 
   .globus {
+    padding: 4rem 4rem;
+
     img {
-      max-width: 100%;
+      min-width: 100%;
     }
+  }
+
+  .industry {
+    h2 {
+      padding-left: 4rem;
+    }
+  }
+
+  .mobile-cards {
+    padding: 2rem 2rem;
   }
 }
 
