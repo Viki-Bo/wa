@@ -24,24 +24,24 @@
 
 @font-face {
   font-family: 'MotivaSans';
-  src: url("/fonts/MotivaSansRegular.woff.ttf") format("opentype");
+  src: url("./fonts/MotivaSansRegular.woff.ttf") format("opentype");
 }
 
 @font-face {
   font-family: 'MotivaSans';
-  src: url("/fonts/MotivaSansBold.woff.ttf") format("opentype");
+  src: url("./fonts/MotivaSansBold.woff.ttf") format("opentype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'MotivaSans';
-  src: url("/fonts/MotivaSansExtraBold.ttf") format("opentype");
+  src: url("./fonts/MotivaSansExtraBold.ttf") format("opentype");
   font-weight: 800;
 }
 
 @font-face {
   font-family: 'MotivaSans';
-  src: url("/fonts/MotivaSansBlack.woff.ttf") format("opentype");
+  src: url("./fonts/MotivaSansBlack.woff.ttf") format("opentype");
   font-weight: 900;
 }
 
